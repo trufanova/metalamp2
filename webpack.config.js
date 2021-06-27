@@ -11,27 +11,30 @@ module.exports = {
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: dist
     },
     plugins: [
         new HTMLWebpackPlugin({
-
-            filename: `./index.html`,
-            chunks: ['index'],
-            template: './index.pug',
+            filename: './index.html',
+            template: './pug/index.pug',
         }),
         new CleanWebpackPlugin()
     ],
     module: {
         rules: [
             {
+                test: /\.pug$/,
+                use: ['pug-loader']
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
-            {
-                test: /\.pug$/,
-                use: 'pug-loader'
-            }
+
         ]
     }
 }
