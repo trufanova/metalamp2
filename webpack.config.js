@@ -1,6 +1,7 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { MiniCssExtractPlugin } = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -27,10 +28,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.pug$/,
-      //   use: ['pug-loader'],
-      // },
       {
         test: /\.pug$/,
         use: [{
@@ -45,6 +42,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: "sass-loader",
+          },
+
+        ]
       },
       {
         test: /\.(jpg|png|gif|svg)$/,

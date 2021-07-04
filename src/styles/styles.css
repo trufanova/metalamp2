@@ -6,18 +6,6 @@
     margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    color: green;
-}
-h2 {
-    color: brown;
-}
-h3 {
-    background: yellow;
-    height: 2rem;
-}
-p {
-    background-color: blue;
-    color: white;
+body {
+  background: gray;
 }

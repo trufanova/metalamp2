@@ -1,0 +1,23 @@
+block variables
+  - var mainColor = '#BC9CFF'
+  - var secondColor = '#6FCF97'
+  - var darkColor = '#1F2041'
+
+block content
+  mixin colorCard(hex, name, className)
+    li.color-card 
+      div(class="color-card__color-box " + className)
+      .color-card__text-wrap
+        .color-card__title=name
+        .color-card__hex=hex
+
+  .color-samples
+    +colorCard(darkColor, 'Dark Shade 100%', 'dark-shade100')
+    +colorCard(darkColor, 'Dark Shade 75%', 'dark-shade75')
+    +colorCard(darkColor, 'Dark Shade 50%', 'dark-shade50')
+    +colorCard(darkColor, 'Dark Shade 25%', 'dark-shade25')
+    +colorCard(darkColor, 'Dark Shade 5%', 'dark-shade5')
+    +colorCard(mainColor, 'Purple', 'mainColor')
+    +colorCard(darkColor, 'Green', 'secondColor')
+
+    
