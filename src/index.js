@@ -1,6 +1,5 @@
-import Post from './Post'
+import * as $ from 'jquery'
 import './styles/styles.css'
+import './logo-colourless/logo-colourless.svg'
+console.log('This is index.js')
 
-const post = new Post('Webpack Post Title')
-
-console.log('Post to String:', post.toString())

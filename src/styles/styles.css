@@ -1,3 +1,5 @@
+@import "~normalize.css";
+
 .container {
     padding-top: 2rem;
     min-width: 1000px;
@@ -7,4 +9,15 @@
 h1 {
     text-align: center;
     color: green;
+}
+h2 {
+    color: brown;
+}
+h3 {
+    background: yellow;
+    height: 2rem;
+}
+p {
+    background-color: blue;
+    color: white;
 }

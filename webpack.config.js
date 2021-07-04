@@ -1,40 +1,60 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
-    entry: {
-        main: './index.js',
-        analytics: './analytics.js'
-    },
-    output: {
-        filename: '[name].[contenthash].js',
-        path: dist
-    },
-    plugins: [
-        new HTMLWebpackPlugin({
-            filename: './index.html',
-            template: './pug/index.pug',
-        }),
-        new CleanWebpackPlugin()
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.pug$/,
-                use: ['pug-loader']
-            },
-            {
-                test: /\.html$/,
-                use: ['html-loader']
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            },
-
-        ]
+  context: path.resolve(__dirname, 'src'),
+  mode: 'development',
+  entry: {
+    main: './index.js',
+  },
+  output: {
+    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
     }
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: './colors-type.html',
+      template: './pages/colors-type/colors-type.pug',
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  module: {
+    rules: [
+      // {
+      //   test: /\.pug$/,
+      //   use: ['pug-loader'],
+      // },
+      {
+        test: /\.pug$/,
+        use: [{
+          loader: 'html-loader'
+        }, {
+          loader: 'pug-html-loader',
+          options: {
+            exports: false
+          }
+        }]
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.(ttf|woff|woff2"eot)$/,
+        use: ['file-loader']
+      }
+
+    ]
+  }
 }
