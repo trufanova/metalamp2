@@ -1,0 +1,44 @@
+@import "../color-variables/color-variables.scss";
+.color-samples {
+  margin: 67px 0 0 0;
+}
+.color-card {
+  display: flex;
+  &__color-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+    &_color_dark-shade100 {
+      background-color: $dark-color;
+    }
+    &_color_dark-shade75 {
+      background-color: $dark-color;
+      opacity: 0.75;
+    }
+    &_color_dark-shade50 {
+      background-color: $dark-color;
+      opacity: 0.50;
+    }
+    &_color_dark-shade25 {
+      background-color: $dark-color;
+      opacity: 0.25;
+    }
+    &_color_dark-shade5 {
+      background-color: $dark-color;
+      opacity: 0.05;
+    }
+    &_color_main-color {
+      background-color: $main-color;
+    }
+    &_color_second-color {
+      background-color: $second-color;
+    }
+  }
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+

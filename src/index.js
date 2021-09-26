@@ -1,5 +1,5 @@
 import * as $ from 'jquery'
-import './styles/styles.css'
-
-console.log('This is index.js')
+import 'normalize.css'
+import './pages/colors-type/colors-type'
+import './components/container/container.scss'
 
