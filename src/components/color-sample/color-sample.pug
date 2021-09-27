@@ -6,9 +6,9 @@ block variables
 block content
   mixin colorCard(hex, name, className)
     .color-card 
-      div(class="color-card__color-box color-card__color-box_color_" + className)
+      div(class="color-card__color-box  color-card__color-box_color_" + className)
       .color-card__text-wrap
-        .color-card__title=name
+        .h2.color-card__title=name
         .color-card__hex=hex
 
   .color-samples

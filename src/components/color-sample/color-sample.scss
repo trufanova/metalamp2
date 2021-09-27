@@ -4,11 +4,17 @@
 }
 .color-card {
   display: flex;
+  margin:0 0 20px 0;
+  &__hex {
+    font-size: 19px;
+    line-height: 28px;
+    color: #1F2041;
+  }
   &__color-box {
     width: 70px;
     height: 70px;
     border-radius: 6px;
-    margin-right: 40px;
+    margin:0 40px 0 0;
     &_color_dark-shade100 {
       background-color: $dark-color;
     }
@@ -40,5 +46,9 @@
     flex-direction: column;
     justify-content: center;
   }
+  &__title {
+
+  }
 }
+
 

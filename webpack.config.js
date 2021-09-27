@@ -3,10 +3,19 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { MiniCssExtractPlugin } = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { webpack } = require('webpack');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
+  devServer: {
+    historyApiFallback: true,
+    //contentBase: path.resolve(__dirname, 'dist'),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 8080,
+  },
   entry: {
     main: './index.js',
   },
