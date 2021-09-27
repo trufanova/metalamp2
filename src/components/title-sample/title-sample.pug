@@ -1,11 +1,11 @@
-mixin titleCard(name, text)
-  div(class=".title-card_size_"+name)
-    .title-card__title=name
-    .title-card__hex=text
+mixin titleCard(name, text, size)
+  div(class="title-samples__card title-samples__card_size title-samples__card_size_"+name)
+    div(class="title-samples__title  title-samples__title_size_"+size )=name
+    div(class="title-samples__hex " +size)=text
 
 .title-samples
-  +titleCard('H1','This one is the sub')
-  +titleCard('H2','Next one is the item title inside widgets')
-  +titleCard('H3','This is a label or cta text')
-  +titleCard('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+  +titleCard('H1','This one is the sub-section or widget title', 'h1')
+  +titleCard('H2','Next one is the item title inside widgets', 'h2')
+  +titleCard('H3','This is a label or cta text','h3')
+  +titleCard('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'body')
 

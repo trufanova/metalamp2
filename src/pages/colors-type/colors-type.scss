@@ -1,3 +1,12 @@
-.header-uikit__logo {
-  margin: 30px;
+.header-uikit {
+  margin-bottom: 67px;
+  &__logo {
+    margin: 30px;
+  }
+}
+
+.colors-type-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
