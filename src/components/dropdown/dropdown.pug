@@ -1,0 +1,8 @@
+mixin dropdown(placeholder, name, classnameinput)
+  .dropdown
+    label(class="dropdown__label h3 ")(for=name) dropdown
+    select(class='dropdown__input '+classnameinput)(type='text' placeholder=placeholder name = name)
+      option(value = "" disabled selected) Сколько гостей
+
+
+

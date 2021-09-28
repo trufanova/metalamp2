@@ -1,7 +1,7 @@
-mixin text-field(value, type, name, classname)
+mixin text-field(placeholder, type, name, classnamelabel, classnameinput)
   .text-field
-    label(class="text-field__label "+classname)(for=name) text-field
-    input.text-field__input(type=type value=value name = name)
+    label(class="text-field__label h3 "+classnamelabel)(for=name) text-field
+    input(class='text-field__input '+classnameinput)(type=type placeholder=placeholder name = name)
 
 
 

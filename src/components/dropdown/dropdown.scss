@@ -1,0 +1,24 @@
+@import './../color-variables/color-variables.scss';
+.dropdown {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  &__label {
+    padding-bottom: 5px;
+  }
+  &__input {
+    width: 320px;
+    max-height: 44px;
+    border: 1px solid $dark25;
+    border-radius: 4px;
+    padding: 13px 15px;
+    outline:none;
+  }
+  &__input::placeholder{
+    color: $dark25;
+    
+  }
+  &__input:hover {
+    border: 1px solid $dark50;
+  }
+}

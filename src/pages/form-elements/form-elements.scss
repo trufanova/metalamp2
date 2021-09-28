@@ -1,0 +1,36 @@
+@import './../../components/color-variables/color-variables.scss';
+
+.form-elements {
+  &__text-field-label {
+    display: flex;
+    width: 320px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__text-field-label::after {
+    content: 'DEFAULT';
+    font-weight: normal;
+    color: $dark50;
+  }
+  &__text-field-hover-label {
+    display: flex;
+    width: 320px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__text-field-hover-label::after {
+    content: 'HOVER / FOCUS';
+    font-weight: normal;
+    color: $dark50;
+  }
+  &__text-field-hover-input {
+    border: 1px solid $dark50;
+  }
+  &__text-field-hover-input::placeholder {
+    color: $dark75;
+  }
+  & .text-field {
+    margin-bottom: 20px;
+  }
+}
+
