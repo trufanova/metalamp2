@@ -17,7 +17,7 @@ module.exports = {
     port: 8080,
   },
   entry: {
-    main: './index.js',
+    index: './index.js',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -30,9 +30,14 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      filename: './colors-type.html',
+      filename: 'colors-type.html',
       template: './pages/colors-type/colors-type.pug',
     }),
+    new HTMLWebpackPlugin({
+      filename: 'form-elements.html',
+      template: './pages/form-elements/form-elements.pug',
+    }),
+
     new CleanWebpackPlugin(),
   ],
   module: {
