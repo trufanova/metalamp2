@@ -10,5 +10,6 @@ html(lang="en")
       .logo-colourless.header-uikit__logo
         img(src=('../../components/logo-colourless/logo-colourless.svg'))
     .container
-        main.colors-type-main
+        main.form-elements
           include ../../components/text-field/text-field.pug
+          +text-field('email', email, 'email', 'form-elements__text-field')

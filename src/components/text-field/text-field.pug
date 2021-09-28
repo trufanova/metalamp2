@@ -1,0 +1,7 @@
+mixin text-field(value, type, name, classname)
+  .text-field
+    label(class="text-field__label "+classname)(for=name) text-field
+    input.text-field__input(type=type value=value name = name)
+
+
+
