@@ -1,0 +1,14 @@
+mixin dropdown-open(...elems)
+  .dropdown-open
+    each el in elems 
+      .dropdown-open__elem
+        .dropdown-open__elem-name= el
+        .dropdown-open__count
+          .dropdown-open__minus - 
+          .dropdown-open__value 0
+          .dropdown-open__plus +
+    a.dropdown__apply Применить
+
+      
+
+

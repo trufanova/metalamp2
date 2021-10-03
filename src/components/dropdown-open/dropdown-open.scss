@@ -1,0 +1,58 @@
+@import './../color-variables/color-variables.scss';
+.dropdown-open {
+  display: flex;
+  flex-direction: column;
+  &__elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 15px;
+    &-name {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $dark100;
+    }
+  }
+  &__count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92px;
+    padding: 7px 7px 7px 0;
+  }
+  &__minus {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark05;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__value {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark100;
+  }
+  &__plus {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark50;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+}

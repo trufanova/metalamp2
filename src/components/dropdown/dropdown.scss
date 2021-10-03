@@ -3,11 +3,13 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  width: 320px;
+  position: relative;
   &__label {
     padding-bottom: 5px;
   }
   &__input {
-    width: 320px;
+    width: 290px;
     max-height: 44px;
     border: 1px solid $dark25;
     border-radius: 4px;
@@ -20,5 +22,25 @@
   }
   &__input:hover {
     border: 1px solid $dark50;
+  }
+  &__wrap::before {
+    content: 'expand_more';
+    display: flex;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+  }
+  &-open {
+    width: 320px;
+    height: 159px;
+    border: 1px solid $dark50;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 10px 20px $dark05;
   }
 }
